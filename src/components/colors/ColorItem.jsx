@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ColorItem = props => {
   // console.log(props);
   const { color, value } = props;
 
-  console.log(color, value);
+  // console.log(color, value);
   return (
     <span
       style={{
@@ -19,6 +20,11 @@ const ColorItem = props => {
       title={color}
     ></span>
   );
+};
+
+ColorItem.propTypes = {
+  color: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default ColorItem;
